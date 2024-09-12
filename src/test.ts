@@ -1,5 +1,5 @@
 export function myFunc(arg: string) : string {
-    console.log('qqq')
+    console.log('ggggg')
 
     return ''
 }
