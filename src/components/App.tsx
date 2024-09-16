@@ -6,6 +6,7 @@ import { Suspense } from 'react';
 import { AboutPageAsync } from '../pages/AboutPage/AboutPageAsync';
 import { MainPageAsync } from '../pages/MainPage/MainPageAsync';
 import { useTheme } from '../Theme/useTheme';
+import { classNames } from '../helpers/classNames/classNames';
 
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
     const {theme, toggleTheme}= useTheme()
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {}, [theme])}>
             <button onClick={toggleTheme}>Toggle theme</button>
             <Link to={'/'}>MainPage</Link>
             <Link to={'about'}>AboutPage</Link>
